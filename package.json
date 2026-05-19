@@ -1,0 +1,54 @@
+{
+  "name": "wechat-article-exporter",
+  "version": "0.0.3",
+  "description": "微信公众号批量下载工具",
+  "keywords": [
+    "公众号",
+    "公众号文章",
+    "批量下载",
+    "在线下载",
+    "wechat",
+    "download"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "node -e \"const version = process.version.slice(1);if (parseInt(version.split('.')[0]) < 20) throw new Error('Expected node version >= 20, Got ' + version)\" && nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "add:biz": "deno run -A --unstable-kv scripts/biz.ts",
+    "stat": "deno run -A --unstable-kv scripts/stat.ts"
+  },
+  "dependencies": {
+    "@iconify-json/heroicons-solid": "^1.1.11",
+    "@nuxt/icon": "^1.3.1",
+    "@nuxt/ui": "^2.17.0",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@vueuse/components": "^10.11.0",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0",
+    "chart.js": "^4.4.3",
+    "chartjs-adapter-dayjs-4": "^1.0.4",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.12",
+    "exceljs": "^4.4.0",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
+    "lucide-vue-next": "^0.441.0",
+    "mime": "^4.0.4",
+    "nuxt": "^3.12.3",
+    "p-queue": "^8.0.1",
+    "uuid": "^11.0.3",
+    "v-calendar": "^3.1.2",
+    "vue": "latest",
+    "vue-chartjs": "^5.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@deno/kv": "^0.8.2",
+    "@types/file-saver": "^2.0.7",
+    "tailwindcss-debug-screens": "^2.2.1",
+    "typescript": "^5.5.3"
+  }
+}
